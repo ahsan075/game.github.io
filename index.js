@@ -38,7 +38,7 @@ btn.addEventListener("click",function(){
         let tempWord=guess.value;
         if (tempWord==newWords){
             play=false;
-            msg.innerHTML=`Awesome. ${newWords} It's Correct`
+            msg.innerHTML=`${newWords} It's Correct`
             btn.innerHTML="Start Again";
             guess.classList.toggle("hidden");
             guess.value="";
