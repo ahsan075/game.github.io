@@ -25,7 +25,7 @@ const Scramble=(array)=>{
     return array;
 }
 
-btn.addEventListener("click",function(){
+const common=()=>{
     if(!play){
         play=true;
         btn.innerHTML="Guess";
@@ -43,8 +43,16 @@ btn.addEventListener("click",function(){
             guess.classList.toggle("hidden");
             guess.value="";
         }else{
-            msg.innerHTML=`Sorry Bro.It's Incorrect.Plz try again ${newRandom}`
+            msg.innerHTML=`Sorry.It's Incorrect.Plz try again ${newRandom}`
             guess.value=""
         }
+    }   
+}
+btn.addEventListener("click",function(){
+    common()
+})
+window.addEventListener("keypress", function (e) {
+    if (e.which == 13) {
+        common()
     }
 })
